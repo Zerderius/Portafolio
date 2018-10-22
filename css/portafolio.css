@@ -1864,14 +1864,30 @@ figure {
       -webkit-box-pack: center;
       -ms-flex-pack: center;
       justify-content: center; } }
+  @media screen and (max-width: 768px) {
+    .project {
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .project-details {
-  width: 50%; }
+  width: 60%; }
   @media screen and (max-width: 480px) {
     .project-details {
       width: 95%;
       font-size: 12px;
       text-align: center; } }
+  @media screen and (max-width: 768px) {
+    .project-details {
+      width: 95%; } }
 
 .project-title {
   font-size: 1em;
@@ -1904,11 +1920,20 @@ figure {
 .project strong {
   font-family: "Open Sans", sans-serif; }
 
-@media screen and (max-width: 480px) {
-  .project-image {
+.project-image {
+  width: 40%; }
+  @media screen and (max-width: 480px) {
+    .project-image {
+      width: 100%; }
+      .project-image img {
+        width: inherit; } }
+  @media screen and (max-width: 768px) {
+    .project-image {
+      width: 100%; }
+      .project-image img {
+        width: inherit; } }
+  .project-image img {
     width: 100%; }
-    .project-image img {
-      width: inherit; } }
 
 .diplomas {
   background-color: azure;

@@ -24,15 +24,24 @@
         flex-wrap: wrap;
         @include flexbox(center, center);
     }
+
+    @include tablet(){
+        flex-wrap: wrap;
+        @include flexbox(center, center);
+    }
 }
 
 .project-details{
-    width: 50%;
+    width: 60%;
 
     @include phone(){
         width: 95%;
         font-size: 12px;
         text-align: center;
+    }
+
+    @include tablet(){
+        width: 95%;
     }
 }
 
@@ -76,11 +85,25 @@
 }
 
 .project-image{
+    width: 40%;
+
     @include phone(){
         width: 100%;
 
         img{
             width: inherit;
         }
+    }
+
+    @include tablet(){
+        width: 100%;
+
+        img{
+            width: inherit;
+        }
+    }
+
+    img{
+        width:100%;
     }
 }
