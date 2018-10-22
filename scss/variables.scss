@@ -1,0 +1,67 @@
+/**********************************************************************\
+*   Colores
+\**********************************************************************/
+
+// $colorPrimary:#009688;
+// $colorPrimaryDark: #00796B;
+$colorPrimary: #00848d;
+$colorPrimaryDark: #006c74 ;
+$colorPrimaryLight: #009ba7;
+
+$colorStrong: #00edff;
+$colorAccent:#00b3c1;
+$colorIcons: #FFFFFF;
+
+$colorPrimaryText: #212121;
+$colorSecondaryText: #757575;
+
+$colorDivider:#BDBDBD;
+$colorFooter: #1b2127;
+
+
+/**********************************************************************\
+*   Tipografia
+\**********************************************************************/
+
+$fontSize: 14px;
+$fontFamilyPrimary : 'Source Sans Pro', sans-serif;
+$fontFamilySecondary: 'Open Sans', sans-serif;
+
+
+/**********************************************************************\
+*   Texturas
+\**********************************************************************/
+
+// $boxShadow: -5px 5px 3px 0px rgba(214,214,214,0.7);
+$boxShadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.25);
+
+/**********************************************************************\
+*   Costantes
+\**********************************************************************/
+
+$borderRadiusBtn: 3px;
+$borderRadiusBox: $borderRadiusBtn + 2;
+
+$diplomaHeight:200px;
+$diplomaWidth: $diplomaHeight * 1.5;
+/**********************************************************************\
+*   Colors
+\**********************************************************************/
+
+//BEM Block element modifier
+
+/*
+block
+    element
+
+
+
+.btn{
+    color:#fff;
+    font-size: 16px;
+}
+
+    .btn__icon{
+        font-size:.6em;
+
+*/

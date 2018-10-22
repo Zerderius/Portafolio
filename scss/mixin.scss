@@ -1,0 +1,67 @@
+
+@mixin flexbox($alignItems, $justifyContent){
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}
+
+@mixin flexbox-align($alignItems){
+    display: flex;
+    align-items: $alignItems;
+}
+
+@mixin flexbox-justify($justifyContent) {
+    display: flex;
+    justify-content: $justifyContent;
+}
+
+@mixin logo($width,$height) {
+    width: $width;
+    height: $height;   
+}
+
+@mixin respond-to($minWidth, $maxWidth){
+    @media (min-width: $minWidth) and (max-width: $maxWidth){
+        @content;
+    }
+}
+
+// Para desktop first empezar con el mediaqueri (MQ) mas grande 
+
+/************************************************************\
+* Desk
+\************************************************************/
+@mixin desk (){
+    @media screen and (max-width:1024px){
+        @content;
+    }
+}
+
+
+/************************************************************\
+* Tablet
+\************************************************************/
+@mixin tablet (){
+    @media screen and (max-width:768px){
+        @content;
+    }
+}
+
+
+/************************************************************\
+* Phone
+\************************************************************/
+@mixin phone (){
+    @media screen and (max-width:480px){
+        @content;
+    }
+}
+
+/************************************************************\
+* Mini Phone
+\************************************************************/
+@mixin miniphone (){
+    @media screen and (max-width:320px){
+        @content;
+    }
+}

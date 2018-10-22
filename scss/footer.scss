@@ -1,0 +1,37 @@
+.footer{
+    @include flexbox(center, space-around);
+    background-color: #2c2f33;
+    color:$colorIcons;
+
+        @include tablet(){
+            @include flexbox(center, space-evenly);
+        }
+
+        @include phone(){
+            flex-direction: column;
+        }
+
+}
+
+.footer-curso{
+    @include flexbox-align(center);
+
+    @include phone(){
+        @include flexbox(center,center);
+        flex-wrap: wrap;
+    }
+}
+
+.footer img{
+    vertical-align: middle;
+    width:30px;
+}
+
+.footer a{
+    color: $colorIcons;
+    text-decoration: none;
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

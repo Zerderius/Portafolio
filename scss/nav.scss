@@ -1,0 +1,160 @@
+
+.burger-button{
+    display: none;
+    
+    @include tablet(){
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(0, 108, 116, 0.8);
+        display: block;
+        line-height: 40px;
+        text-align: center;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 5;
+        color: #fff;
+    }
+
+    @include phone(){
+        top: 5px;
+        left: 5px;
+    }
+}
+
+
+.header{
+    @include flexbox(center, space-between);
+    background-color: $colorPrimary;
+    color: $colorIcons;
+    box-shadow: $boxShadow;
+    height: 72px;
+    position: sticky;
+    top:0;
+
+    .container{
+        max-width: 100%;
+        width: 100%;
+        padding: 0 2em;
+    }
+
+    .logo{
+        @include logo(50px,50px); 
+        margin: 0;
+
+        img{
+            width: 100%;
+            height: 100%;
+        }        
+    }
+
+    h1{
+        @include phone(){
+            margin: 10px;
+        }
+    }
+
+    @include phone(){
+        @include flexbox(center, space-around);
+        flex-wrap: wrap;
+        height: fit-content
+    }
+
+    @include tablet(){
+        @include flexbox(center, space-around);
+    }
+
+}
+
+.nav{
+    height: inherit;
+
+    ul{
+        @include flexbox-justify(space-between);
+        height: inherit;  
+        
+        li{
+            display: flex;    
+            height: inherit;
+
+            a{
+                @include flexbox-align(center);
+                text-decoration: none;
+                color: #fff;
+                height: inherit;
+                padding: 0 30px;
+
+                &:hover{
+                    background-color: #49b3c1;  
+                }
+
+                @include phone(){
+                    padding: 0 20px;
+                    height: 10vh;
+                    font-size: 2em;
+                }
+
+                @include tablet(){
+                    padding: 0 20px;
+                    height: 10vh;
+                    font-size: 2em;
+                }
+            }
+
+            @include phone(){
+                width: inherit;
+                @include flexbox-justify(center);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            @include tablet(){
+                width: inherit;
+                @include flexbox-justify(center);
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        } 
+        
+        @include tablet(){
+            @include flexbox(center,space-around);
+            flex-direction: column;
+            height: auto;
+            width: inherit;
+        }
+    }
+
+    @include phone(){
+        
+    }
+
+    @include tablet(){
+        @include flexbox(center,center);
+        position: fixed;
+        background: #49b3c1;
+        width: 100vw;
+        height: 100vh;
+        z-index: 4;
+        top: 0;
+        left: -100vw;
+        background: rgba(73, 179, 193, 0.7);
+        transition: .2s;
+    }
+}
+
+.is-active{
+    left: 0;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure{
+    margin: 0;
+}

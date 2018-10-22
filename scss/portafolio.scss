@@ -1,0 +1,142 @@
+@import "variables";
+@import "mixin";
+@import "fonts";
+/**********************************************************************\
+    Reglas, selectores, declaraciones, propiedades, valores
+
+    Regla css es el conjunto de un selector que contiene declaraciones
+    compuestas por atributos y valores.
+    
+    -------------------------------------------------------------------
+        -Selector de etiqueta
+        body{
+            -Declaracion es todo lo que va dentro de las llaves
+                atributo:valor;            
+        }
+
+        header{
+            -Declaracion es todo lo que va dentro de las llaves
+                atributo:valor;   
+        }
+    -------------------------------------------------------------------
+    
+    -------------------------------------------------------------------
+        -Selector desencente
+        body header div nav ol li a{
+            -Declaracion es todo lo que va dentro de las llaves
+                atributo:valor;   
+        }    
+    -------------------------------------------------------------------
+
+    -------------------------------------------------------------------
+        -Selector de clase
+        .portafolio{
+            -Declaracion es todo lo que va dentro de las llaves
+                atributo:valor;   
+        }
+    -------------------------------------------------------------------
+
+    -------------------------------------------------------------------
+        -Selector de id
+        #portafolio{
+            -Declaracion es todo lo que va dentro de las llaves
+                atributo:valor;   
+        }
+    -------------------------------------------------------------------
+
+\**********************************************************************/
+
+@import "nav";
+
+@import "hero";
+@import "project";
+@import "diplomas";
+
+@import "footer";
+
+body{
+    padding:0px;
+    margin: 0px;
+    font-family: $fontFamilyPrimary;
+}
+
+h1{
+    color: $colorIcons;  
+    
+    @include phone(){
+        font-size: 1.2em;
+    }  
+
+    @include tablet(){
+        font-size: 1.5em;
+    }
+}
+
+h1 strong{
+    color: $colorStrong;
+}
+
+h2 {
+    color: $colorAccent;
+    text-transform: uppercase;
+    font-family: $fontFamilyPrimary;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+
+    @include phone(){
+        font-size: 1em;
+    }
+
+    @include tablet(){
+        font-size: 1.2em;
+    }
+}
+
+h6{
+    font-family: $fontFamilySecondary;
+}
+
+li{
+    list-style: none;
+}
+
+.flexbox{
+    display:flex;
+    //flex-wrap: nowrap; //evita que los elementos bajen
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+}
+
+.box{
+    width: 50px;
+    height: 50px;
+    border: 1px solid red;
+    //align-self: center;// para alinear el elemento por si mismo 
+}
+
+.container{
+    max-width: 1200px;
+    // width: 80%;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items:inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    // border: 1px solid red;   
+    
+    @include respond-to(375px,640px){
+        width: 100%;
+        flex: 1;
+    }
+
+    @include respond-to(641px,800px){
+        width:90%;
+    }
+
+}

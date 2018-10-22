@@ -1,0 +1,108 @@
+.diplomas{
+    background-color: azure;
+    padding: 20px;
+    border-bottom: 1px solid #afafaf;
+
+    h2{
+        @include tablet(){
+            text-align: center;
+        }
+    }
+}
+
+
+.diplomas-container{
+    @include flexbox(center,space-between);
+    flex-wrap: wrap;
+
+    @include respond-to(375px,640px){
+        @include flexbox(center, space-around);
+    }
+
+    @include respond-to(641px,800px){
+        @include flexbox(center, space-evenly);
+    }
+}
+
+.diploma{
+    @include flexbox(center,space-evenly);
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: $boxShadow;
+    border-radius: 0px;
+    border: 1px solid silver;
+    height: $diplomaHeight;
+    width: $diplomaWidth;
+    margin: 10px;
+    box-sizing: border-box;
+
+    i {
+        position: absolute;
+        top: 0px;
+        left: 5px;
+        font-size: 36px;
+        color: $colorPrimaryDark;
+    }
+}
+
+.diploma-title-container{
+    border-bottom: 3px solid #00b3c1;;
+    height: 25%;
+    width: 100%;
+    border-top: 3px solid #00b3c1;;
+    margin-top: 1.5em;
+    @include flexbox(center,center);
+}
+
+.diploma-title{
+    font-family: $fontFamilyPrimary;
+    text-align: center;
+    color: $colorPrimaryDark;
+    font-weight: bold;
+}
+
+.diploma-date-container{
+    height: 20%;
+    width: 100%;
+    padding: 1px;
+    @include flexbox(center,center);
+}
+
+.diploma-date{
+    font-size: 14px;
+}
+
+.diploma-company{
+    height: 20%;
+    width: 100%;
+    padding: 1px;
+    border-bottom: 27px solid #00848d;
+    padding: 5px 0;
+    border-radius: 0px;
+    @include flexbox(center,center);
+
+    button{
+        width: 120px;
+        height: 30px;
+        border-radius: 10px; 
+        border: 1px solid $colorPrimaryDark;
+        color: #000;
+        background-color: $colorIcons;
+
+        &:hover{
+            border: 1px solid $colorPrimary;
+            cursor: pointer;
+            background-color: $colorPrimary;
+            color: $colorIcons;
+        }
+
+        @include phone(){
+            border-radius: 20px;
+            height: 30px;
+            width: 100px;
+            border: 1px solid $colorPrimaryDark;
+            color: #fff;
+            background-color: $colorPrimary;
+        }
+    }
+}
