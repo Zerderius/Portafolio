@@ -1,7 +1,7 @@
 
 const portafolio = new function(){    
 
-    let performBurgerEvent = function(type){
+    const performBurgerEvent = function(type){
         const burger_menu = document.querySelector('.burger-button');
         const menu = document.querySelector('nav');
 
@@ -14,17 +14,20 @@ const portafolio = new function(){
             burger_menu.removeEventListener('click',hideshow); 
     }
 
-    let diplomas = [
+    const diplomas = [
         {title:'Curso de desarrollo web online (2016)',date:'3 de Mayo 2018',company:'Platzi'},
         {title:'Curso de bases técnicas de android',date:'4 de Junio de 2018',company:'Platzi'},
         {title:'Introducción al diseño de prototipos',date:'5 de Julio 2018',company:'Platzi'},
         {title:'Curso de CSS Grid Layout',date:'3 de Septiembre 2018',company:'Platzi'},
         {title:'Curso de desarrollo web online (2018)',date:'24 de Septiembre 2018',company:'Platzi'},
         {title:'Fundamentos de javascript',date:'4 de Octubre 2018',company:'Platzi'},
-        {title:'Curso de responsive design (2018)',date:'17 de Octubre 2018',company:'Platzi'}
+        {title:'Curso de responsive design (2018)',date:'17 de Octubre 2018',company:'Platzi'},
+        {title:'Curso de jQuery a JavaScript',date:'19 de Octubre 2018',company:'Platzi'},
+        {title:'Curso de SASS',date:'31 de Octubre 2018',company:'Platzi'},
+        {title:'Curso de Adobe XD',date:'8 de Noviembre 2018',company:'Platzi'}
     ];
 
-    let renderDiplomas = function(){
+    const renderDiplomas = function(){
 
         let diplomaTemplate = ({title,date,company}) => {
             return `<div class="diploma">
@@ -46,9 +49,9 @@ const portafolio = new function(){
                     </div>`;
         };
 
-        let $diplomasContainer = document.querySelector('.diplomas-container');
+        const $diplomasContainer = document.querySelector('.diplomas-container');
 
-        let createHtml = (template) => {
+        const createHtml = (template) => {
             const html = document.implementation.createHTMLDocument();
             html.body.innerHTML = template
             return html.body.children[0];
@@ -68,7 +71,7 @@ const portafolio = new function(){
 
         const tablet = window.matchMedia('screen and (max-width:768px)')
         
-        let validation = function(event){
+        const validation = function(event){
             console.log(event);
             if(event.matches){
                 performBurgerEvent('add');
